@@ -9,16 +9,24 @@
 /* Begin PBXBuildFile section */
 		7030249F22A69AC200CF2FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030249E22A69AC200CF2FF7 /* AppDelegate.swift */; };
 		703024A122A69AC300CF2FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 703024A022A69AC300CF2FF7 /* Assets.xcassets */; };
-		703024A422A69AC300CF2FF7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703024A222A69AC300CF2FF7 /* MainMenu.xib */; };
+		703024AD22A6A95B00CF2FF7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703024AC22A6A95B00CF2FF7 /* MainMenu.xib */; };
+		70EC72CC22A92B2100F47221 /* enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EC72CA22A92B2100F47221 /* enable.png */; };
+		70EC72CD22A92B2100F47221 /* disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EC72CB22A92B2100F47221 /* disable.png */; };
+		70EC72CF22A92F5B00F47221 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EC72CE22A92F5B00F47221 /* Bash.swift */; };
+		70EC72D122A9304F00F47221 /* problem.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EC72D022A9304F00F47221 /* problem.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7030249B22A69AC200CF2FF7 /* SwitchProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7030249E22A69AC200CF2FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		703024A022A69AC300CF2FF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		703024A322A69AC300CF2FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		703024A522A69AC300CF2FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		703024A622A69AC300CF2FF7 /* SwitchProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwitchProxy.entitlements; sourceTree = "<group>"; };
+		703024AC22A6A95B00CF2FF7 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		70EC72CA22A92B2100F47221 /* enable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enable.png; sourceTree = "<group>"; };
+		70EC72CB22A92B2100F47221 /* disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disable.png; sourceTree = "<group>"; };
+		70EC72CE22A92F5B00F47221 /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
+		70EC72D022A9304F00F47221 /* problem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = problem.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +59,15 @@
 		7030249D22A69AC200CF2FF7 /* SwitchProxy */ = {
 			isa = PBXGroup;
 			children = (
+				70EC72D022A9304F00F47221 /* problem.png */,
+				70EC72CB22A92B2100F47221 /* disable.png */,
+				70EC72CA22A92B2100F47221 /* enable.png */,
 				7030249E22A69AC200CF2FF7 /* AppDelegate.swift */,
 				703024A022A69AC300CF2FF7 /* Assets.xcassets */,
-				703024A222A69AC300CF2FF7 /* MainMenu.xib */,
 				703024A522A69AC300CF2FF7 /* Info.plist */,
+				703024AC22A6A95B00CF2FF7 /* MainMenu.xib */,
 				703024A622A69AC300CF2FF7 /* SwitchProxy.entitlements */,
+				70EC72CE22A92F5B00F47221 /* Bash.swift */,
 			);
 			path = SwitchProxy;
 			sourceTree = "<group>";
@@ -92,6 +104,11 @@
 				TargetAttributes = {
 					7030249A22A69AC200CF2FF7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -119,7 +136,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				703024A122A69AC300CF2FF7 /* Assets.xcassets in Resources */,
-				703024A422A69AC300CF2FF7 /* MainMenu.xib in Resources */,
+				703024AD22A6A95B00CF2FF7 /* MainMenu.xib in Resources */,
+				70EC72CD22A92B2100F47221 /* disable.png in Resources */,
+				70EC72D122A9304F00F47221 /* problem.png in Resources */,
+				70EC72CC22A92B2100F47221 /* enable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,21 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7030249F22A69AC200CF2FF7 /* AppDelegate.swift in Sources */,
+				70EC72CF22A92F5B00F47221 /* Bash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		703024A222A69AC300CF2FF7 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				703024A322A69AC300CF2FF7 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		703024A722A69AC300CF2FF7 /* Debug */ = {
@@ -267,7 +277,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwitchProxy/SwitchProxy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwitchProxy/Info.plist;
@@ -285,7 +294,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwitchProxy/SwitchProxy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwitchProxy/Info.plist;
